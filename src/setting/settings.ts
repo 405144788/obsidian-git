@@ -343,9 +343,9 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
 
             if (Platform.isDesktopApp)
                 new Setting(containerEl)
-                    .setName(t("Commit message script")))
+                    .setName(t("Commit message script"))
                     .setDesc(
-                        t("A script that is run using 'sh -c' to generate the commit message. May be used to generate commit messages using AI tools. Available placeholders: {{hostname}}, {{date}}.") to generate the commit message. May be used to generate commit messages using AI tools. Available placeholders: {{hostname}}, {{date}}."
+                        t("A script that is run using 'sh -c' to generate the commit message. May be used to generate commit messages using AI tools. Available placeholders: {{hostname}}, {{date}}.")
                     )
                     .addText((text) => {
                         text.onChange(async (value) => {
@@ -364,7 +364,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
                     });
 
             const datePlaceholderSetting = new Setting(containerEl)
-                .setName(t("{{date}} placeholder format")))
+                .setName(t("{{date}} placeholder format"))
                 .addMomentFormat((text) =>
                     text
                         .setDefaultFormat(plugin.settings.commitDateFormat)
@@ -390,7 +390,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
             });
 
             new Setting(containerEl)
-                .setName(t("{{hostname}} placeholder replacement")))
+                .setName(t("{{hostname}} placeholder replacement"))
                 .setDesc(
                     "Specify custom hostname for every device. Defaults to the OS hostname if not set on desktop."
                 )
@@ -994,7 +994,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
                 });
         if (plugin.gitManager instanceof SimpleGit)
             new Setting(containerEl)
-                .setName(t("Reload with new environment variables")))
+                .setName(t("Reload with new environment variables"))
                 .setDesc(
                     "Removing previously added environment variables will not take effect until Obsidian is restarted."
                 )
@@ -1068,7 +1068,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
 
         new Setting(containerEl).setName(t("Support")).setHeading();
         new Setting(containerEl)
-            .setName(t(t("Donate")))
+            .setName(t("Donate"))
             .setDesc(
                 "If you like this Plugin, consider donating to support continued development."
             )
@@ -1217,7 +1217,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
 
         if (this.settings.lineAuthor.show) {
             const trackMovement = new Setting(this.containerEl)
-                .setName(t("Follow movement and copies across files and commits")))
+                .setName(t("Follow movement and copies across files and commits"))
                 .addDropdown((dropdown) => {
                     dropdown.addOptions(<
                         Record<LineAuthorFollowMovement, string>
@@ -1265,7 +1265,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
             });
 
             new Setting(this.containerEl)
-                .setName(t("Show commit hash")))
+                .setName(t("Show commit hash"))
                 .addToggle((tgl) => {
                     tgl.setValue(this.settings.lineAuthor.showCommitHash);
                     tgl.onChange((value: boolean) =>
@@ -1358,7 +1358,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
             }
 
             const timezoneSetting = new Setting(this.containerEl)
-                .setName(t("Authoring date display timezone")))
+                .setName(t("Authoring date display timezone"))
                 .addDropdown((dropdown) => {
                     const options: Record<LineAuthorTimezoneOption, string> = {
                         "viewer-local": "My local (default)",
@@ -1419,7 +1419,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
             this.createColorSetting("oldest");
 
             const textColorSetting = new Setting(this.containerEl)
-                .setName(t("Text color")))
+                .setName(t("Text color"))
                 .addText((field) => {
                     field.setValue(this.settings.lineAuthor.textColorCss);
                     field.onChange(async (value) => {
@@ -1470,7 +1470,7 @@ export class ObsidianGitSettingsTab extends PluginSettingTab {
             });
 
             const ignoreWhitespaceSetting = new Setting(this.containerEl)
-                .setName(t("Ignore whitespace and newlines in changes")))
+                .setName(t("Ignore whitespace and newlines in changes"))
                 .addToggle((tgl) => {
                     tgl.setValue(this.settings.lineAuthor.ignoreWhitespace);
                     tgl.onChange((value) =>
