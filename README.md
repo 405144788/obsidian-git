@@ -1,8 +1,19 @@
-# Obsidian Git Plugin
+# Obsidian Git 中文汉化版 🇨🇳
 
-A powerful community plugin for [Obsidian.md](Obsidian.md) that brings Git integration right into your vault. Automatically commit, pull, push, and see your changes — all within Obsidian.
+> 基于 [Vinzent03/obsidian-git](https://github.com/Vinzent03/obsidian-git) v2.38.2，增加 **简体中文 (zh-CN)** 界面翻译。
 
-## 📚 Documentation
+## 与上游的区别
+
+- ✅ 完整的 i18n 框架（`src/lang/`）
+- ✅ 设置页面、命令面板、Source Control、History View 全部汉化
+- ✅ 自动跟随 Obsidian 语言设置，也可手动选 `zh-cn`
+- ✅ 通过 GitHub Actions 自动构建
+
+## 安装
+
+从 [Releases](https://github.com/405144788/obsidian-git/releases) 下载 `main.js`、`manifest.json`、`styles.css`，放入 `.obsidian/plugins/obsidian-git/` 目录，重启 Obsidian。
+
+## 📚 文档（英文）
 
 All setup instructions (including mobile), common issues, tips, and advanced configuration can be found in the 📖 [full documentation](https://publish.obsidian.md/git-doc).
 
@@ -126,14 +137,9 @@ One such alternative is [GitSync](https://github.com/ViscousPot/GitSync), which 
 
 If you have a large repo/vault I recommend to stage individual files and only commit staged files.
 
-## 🙋 Contact & Credits
+## 🙋 致谢
 
-- The Line Authoring feature was developed by [GollyTicker](https://github.com/GollyTicker), so any questions may be best answered by her.
-- This plugin was initial developed by [denolehov](https://github.com/denolehov). Since March 2021, it's me [Vinzent03](https://github.com/Vinzent03) who is developing this plugin. That's why the GitHub repository got moved to my account in July 2024.
-- If you have any kind of feedback or questions, feel free to reach out via GitHub issues.
-
-## ☕ Support
-
-If you find this plugin useful and would like to support its development, you can support me on Ko-fi.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F195IQ5)
+- 原始插件：[denolehov/obsidian-git](https://github.com/denolehov/obsidian-git) → [Vinzent03/obsidian-git](https://github.com/Vinzent03/obsidian-git)
+- 中文 i18n 贡献：[CY1211NET](https://github.com/CY1211NET)（PR #1063）
+- Line Authoring：[GollyTicker](https://github.com/GollyTicker)
+- 汉化版维护：[405144788](https://github.com/405144788)
