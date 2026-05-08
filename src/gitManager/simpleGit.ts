@@ -16,6 +16,7 @@ import {
 import type { LineAuthorFollowMovement } from "src/editor/lineAuthor/model";
 import { GeneralModal } from "src/ui/modals/generalModal";
 import type ObsidianGit from "../main";
+import { t } from "../lang/helpers";
 import type {
     Blame,
     BlameCommit,
@@ -55,7 +56,7 @@ export class SimpleGit extends GitManager {
                         this.plugin.settings.basePath
                     );
                 } else if (!ignoreError) {
-                    new Notice("ObsidianGit: Base path does not exist");
+                    new Notice(t("ObsidianGit: Base path does not exist"));
                 }
             }
             this.absoluteRepoPath = basePath;
@@ -258,7 +259,7 @@ export class SimpleGit extends GitManager {
                     obscure,
                     placeholder:
                         data.length > 60
-                            ? "Enter a response to the message."
+                            ? t("Enter a response to the message.")
                             : data,
                 }).openAndGetResult();
                 notice?.hide();
@@ -690,8 +691,11 @@ export class SimpleGit extends GitManager {
                         }
                     } catch (err) {
                         this.plugin.displayError(
-                            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-                            `Pull failed (${this.plugin.settings.syncMethod}): ${"message" in err ? err.message : err}`
+                            t(
+                                "Pull failed (%1): %2",
+                                this.plugin.settings.syncMethod,
+                                "message" in err ? err.message : err
+                            )
                         );
                         return;
                     }
@@ -705,8 +709,11 @@ export class SimpleGit extends GitManager {
                         await this.unstageAll({});
                     } catch (err) {
                         this.plugin.displayError(
-                            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-                            `Sync failed (${this.plugin.settings.syncMethod}): ${"message" in err ? err.message : err}`
+                            t(
+                                "Sync failed (%1): %2",
+                                this.plugin.settings.syncMethod,
+                                "message" in err ? err.message : err
+                            )
                         );
                     }
                 }
