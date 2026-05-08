@@ -1,6 +1,13 @@
 # Obsidian Git 中文汉化版 🇨🇳
 
+[![GitHub release](https://img.shields.io/github/v/release/405144788/obsidian-git?style=for-the-badge&sort=semver)](https://github.com/405144788/obsidian-git/releases/latest)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+
 > 基于 [Vinzent03/obsidian-git](https://github.com/Vinzent03/obsidian-git) v2.38.2，增加 **简体中文 (zh-CN)** 界面翻译。
+
+## 简介
+
+Obsidian Git 插件的社区汉化分支。在 Obsidian 内集成 Git 版本控制——自动 commit、pull、push，查看变更记录，全部中文界面。
 
 ## 与上游的区别
 
@@ -11,9 +18,33 @@
 
 ## 安装
 
-从 [Releases](https://github.com/405144788/obsidian-git/releases) 下载 `main.js`、`manifest.json`、`styles.css`，放入 `.obsidian/plugins/obsidian-git/` 目录，重启 Obsidian。
+### BRAT 安装
+1. 安装 [BRAT](https://github.com/TfTHacker/obsidian42-brat) 插件
+2. BRAT 中添加 `405144788/obsidian-git`
 
-## 📚 文档（英文）
+### 手动安装
+1. 从 [Releases](https://github.com/405144788/obsidian-git/releases) 下载最新版
+2. 将 `main.js`、`manifest.json`、`styles.css` 放入 `.obsidian/plugins/obsidian-git/`
+3. 重启 Obsidian
+
+## 开发
+
+```bash
+git clone https://github.com/405144788/obsidian-git.git
+cd obsidian-git
+pnpm install
+pnpm run build
+```
+
+## 致谢
+
+- 原始插件：[Vinzent03/obsidian-git](https://github.com/Vinzent03/obsidian-git)（MIT）
+- 中文 i18n 贡献：[CY1211NET](https://github.com/CY1211NET)（PR #1063）
+- 初始作者：[denolehov](https://github.com/denolehov)
+
+---
+
+# English
 
 All setup instructions (including mobile), common issues, tips, and advanced configuration can be found in the 📖 [full documentation](https://publish.obsidian.md/git-doc).
 
