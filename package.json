@@ -1,6 +1,6 @@
 {
     "name": "obsidian-git",
-    "version": "2.38.2-zh",
+    "version": "1.0.0",
     "description": "Obsidian Git 中文汉化版 — 基于 Vinzent03/obsidian-git，增加简体中文 (zh-CN) i18n 支持",
     "main": "main.js",
     "scripts": {

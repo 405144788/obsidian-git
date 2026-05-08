@@ -1,10 +1,9 @@
 {
-    "author": "Vinzent",
-    "authorUrl": "https://github.com/Vinzent03",
+    "author": "405144788 (Chinese fork)",
+    "authorUrl": "https://github.com/405144788/obsidian-git",
     "id": "obsidian-git",
-    "name": "Git",
-    "description": "Integrate Git version control with automatic backup and other advanced features.",
+    "name": "Git (中文汉化)",
+    "description": "Git 版本控制自动备份 — 中文汉化版，基于 Vinzent03/obsidian-git",
     "isDesktopOnly": false,
-    "fundingUrl": "https://ko-fi.com/vinzent",
-    "version": "2.38.2"
+    "version": "1.0.0"
 }
